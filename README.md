@@ -20,7 +20,7 @@ Some JS practices that I used:
 - enumerations with objects
 
 
-![Calculator](../img/calculator.png)
+![Calculator](/img/calculator.png)
 
 
 
