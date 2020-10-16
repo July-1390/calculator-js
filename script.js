@@ -2,14 +2,15 @@ const calculator = document.querySelector(".calculator");
 const keys = calculator.querySelector(".calculator-keys");
 const display = document.querySelector(".calculator-display");
 
-Actions = {
+const Actions = {
   ADD: "ADD",
   SUBSTRACT: "SUBSTRACT",
   MULTIPLY: "MULTIPLY",
   DIVIDE: "DIVIDE",
 };
+const AllActions = Object.keys(Actions);
 
-KeyTypes = {
+const KeyTypes = {
   NUMBER: "number",
   DECIMAL: "decimal",
   OPERATOR: "operator",
@@ -29,12 +30,7 @@ const calculate = (n1, operator, n2) => {
 const getKeyType = (key) => {
   const { action } = key.dataset;
   if (!action) return KeyTypes.NUMBER;
-  if (
-    action === Actions.ADD ||
-    action === Actions.SUBSTRACT ||
-    action === Actions.MULTIPLY ||
-    action === Actions.DIVIDE
-  )
+  if (AllActions.indexOf(action) != -1)
     return KeyTypes.OPERATOR;
   // For everything else, return the action
   return action;
