@@ -11,11 +11,11 @@ const Actions = {
 const AllActions = Object.keys(Actions);
 
 const KeyTypes = {
-  NUMBER: "number",
-  DECIMAL: "decimal",
-  OPERATOR: "operator",
-  CLEAR: "clear",
-  CALCULATE: "calculate",
+  NUMBER: "NUMBER",
+  DECIMAL: "DECIMAL",
+  OPERATOR: "OPERATOR",
+  CLEAR: "CLEAR",
+  CALCULATE: "CALCULATE",
 };
 const calculate = (n1, operator, n2) => {
   // Perform calculation and return calculated value
